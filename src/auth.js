@@ -66,10 +66,10 @@ function injectAuthDialog() {
     divEl.id = "auth-dialog";
     divEl.style.display = "none";
     divEl.innerHTML = `
-        <span style="font-size:22px;font-weight:blod;">${auth.title}</span>
-        <input type="password" id="auth-pwd" placeholder="Password">
-        <button onclick="checkPassword()">提交</button>
-        <p id="error-message" style="color: red; display: none;">密码错误，无法访问。</p>
+        <span style="font-size:22px;font-weight:blod;">Ange lösenord</span>
+        <input type="password" id="auth-pwd" placeholder="Lösenord">
+        <button onclick="checkPassword()">Logga in</button>
+        <p id="error-message" style="color: red; display: none;">Fel lösenord</p>
     `;
     document.getElementsByTagName("body")[0].appendChild(divEl);
 }
@@ -130,7 +130,6 @@ export function install (hook, vm) {
                     document.getElementById('error-message').style.display = 'block';
                 }
             }
-            return '<div style="color:red;">第一次认证成功后，请重新刷新即可查看内容！</div>';
         } else {
             setAuthDialog(false);
             return content;  // 返回原始内容
