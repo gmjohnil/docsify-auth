@@ -81,14 +81,14 @@ function setAuthDialog(isShow) {
             document.getElementsByClassName('github-corner')[0].style.display='none';
         }
         document.getElementsByTagName('main')[0].style.display='none';
-        document.getElementsByTagName('nav')[0].style.display='none';
+        // document.getElementsByTagName('nav')[0].style.display='none';
     } else {
         document.getElementById('auth-dialog').style.display = 'none';
         if (document.getElementsByClassName('github-corner')[0]) {
             document.getElementsByClassName('github-corner')[0].style.display='block';
         }
         document.getElementsByTagName('main')[0].style.display='block';
-        document.getElementsByTagName('nav')[0].style.display='block';
+        // document.getElementsByTagName('nav')[0].style.display='block';
     }
 }
 
